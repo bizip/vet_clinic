@@ -10,5 +10,5 @@ CREATE TABLE animals (
     PRIMARY KEY(id)
 );
 
-ALTER TABLE Customers ADD species varchar(255);
+ALTER TABLE animals ADD species varchar(255);
 

@@ -15,7 +15,15 @@ select * from animals where weight_kg >=10.4 and weight_kg <=17.3;
 BEGIN;
 UPDATE animals set species='digimon' where name like '%mon';
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+SELECT species from animals;
+COMMIT;
+SELECT species from animals;
+-- altering animals table by adding species to unspecified to unspecified 
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+select * from animals;
 ROLLBACK;
+select * from animals;
 
 -- Delete all records in the animals table, then roll back the transaction
 BEGIN;
@@ -46,6 +54,6 @@ SELECT COUNT(escape_attempts) AS tope_scape,neutered from animals GROUP BY neute
 -- 5.What is the minimum and maximum weight of each type of animal?
  SELECT MIN(weight_kg) as minimum_weight, MAX(weight_kg) as maximum_weight FROM animals;
 -- 6.What is the average number of escape attempts per animal type of those born between 1990 and 2000?
- SELECT species AS Types, AVG(escape_attempts) AS Escape_attempts from animals GROUP BY species;
+SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
 
