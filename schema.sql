@@ -12,3 +12,21 @@ CREATE TABLE animals (
 
 ALTER TABLE animals ADD species varchar(255);
 
+-- Vet clinic database: query multiple tables
+CREATE TABLE owners(
+id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+full_name VARCHAR(250),
+age VARCHAR(250)
+);
+
+CREATE TABLE species(
+id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(250)
+);
+
+
+-- Vet clinic database: query multiple tables
+
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD COLUMN species_id INT REFERENCES species(id) ON DELETE CASCADE;
+ALTER TABLE animals ADD COLUMN owners_id INT REFERENCES owners(id) ON DELETE CASCADE;
