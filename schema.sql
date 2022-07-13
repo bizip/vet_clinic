@@ -24,3 +24,9 @@ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 name VARCHAR(250)
 );
 
+
+-- Vet clinic database: query multiple tables
+
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD COLUMN species_id INT REFERENCES species(id) ON DELETE CASCADE;
+ALTER TABLE animals ADD COLUMN owners_id INT REFERENCES owners(id) ON DELETE CASCADE;

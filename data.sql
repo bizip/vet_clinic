@@ -16,3 +16,17 @@ INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) valu
 INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) values ( 'Blossom','1998-13-10',3,true,17);
 INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg) values ( 'Angemon','2022-05-14',4,true,22);
 
+-- insert data in owners table
+INSERT INTO owners (full_name,age) values ('Sam Smith',34),('Jennifer Orwell',19),('Bob',45),
+('Melody Pond',77),('Dean Winchester',14),('Jodie Whittaker',38);
+
+-- add species id in animals table
+
+ALTER TABLE animals set 
+UPDATE animals set species_id=(SELECT id FROM species where name='Digimon') WHERE name LIKE '%mon';
+UPDATE animals set species_id=(SELECT id FROM species where name='Pokemon') WHERE species_id IS NULL;
+UPDATE animals set owners_id = (SELECT id FROM owners where  full_name = 'Sam Smith') where name = 'Agumon';
+UPDATE animals set owners_id = (SELECT id FROM owners where  full_name = 'Jennifer Orwell') where name = 'Gabumon' OR name = 'Pikachu';
+UPDATE animals set owners_id = (SELECT id FROM owners where  full_name = 'Bob') where name = 'Devimon' OR name = 'Plantmon';
+UPDATE animals set owners_id = (SELECT id FROM owners where  full_name = 'Melody Pond') where name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+UPDATE animals set owners_id = (SELECT id FROM owners where  full_name = 'Dean Winchester') where name = 'Angemon' OR name ='Boarmon';
