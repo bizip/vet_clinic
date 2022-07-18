@@ -139,8 +139,7 @@ WHERE vets.name = 'Vet Maisy Smith'
 GROUP BY species.name 
 ORDER BY count DESC LIMIT 1;
 
--- Add an email column to your owners table
-ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4
 
 
 

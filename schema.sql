@@ -49,3 +49,12 @@ CREATE TABLE visits (
     vets_id INT REFERENCES vets(id) ON DELETE CASCADE,
     animals_id INT REFERENCES animals(id)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX animals_id_index ON visits(animals_id);
+
+CREATE INDEX owners_index ON owners(email);
+
+CREATE INDEX vets_index ON visits(vets_id);
