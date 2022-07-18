@@ -12,11 +12,17 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Bizimungu Pascal**
 
 - GitHub: [@githubhandle](https://github.com/bizip)
 - Twitter: [@twitterhandle](https://twitter.com/BizimunguPasca9)
 - LinkedIn: [LinkedIn](www.linkedin.com/in/bizimungu)
+
+
+👤 **Emirjeta Veisllari**
+- GitHub: [@myelin0](https://github.com/myelin0)
+- Twitter: [@Amy_Albania](https://twitter.com/Amy_albania)
+- LinkedIn: [@Emirjeta Veisllari](https://www.linkedin.com/in/emirjeta-veisllari/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
