@@ -1,6 +1,10 @@
-# Vel clinic project
+# Vet clinic project
 
 In this project, I have developed a relational database to create the data structure for a vet clinic app. I have created different tables to make a complete database with data about animals, animals' owners, clinic employees, and visits
+
+# Vet clinic ER diagram of the project
+
+![](./er_diagram.PNG)
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
